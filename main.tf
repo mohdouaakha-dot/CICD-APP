@@ -49,7 +49,20 @@ output "webapp_name" {
   description = "The name of the generated Azure Web App"
 }
 
+# Import Resource Group
 import {
   to = azurerm_resource_group.rg
   id = "/subscriptions/1f732aca-0422-4a0c-8e68-9db55f9accb2/resourceGroups/rg-terraform-cicd-lab-v2"
+}
+
+# Import App Service Plan
+import {
+  to = azurerm_service_plan.plan
+  id = "/subscriptions/1f732aca-0422-4a0c-8e68-9db55f9accb2/resourceGroups/rg-terraform-cicd-lab-v2/providers/Microsoft.Web/serverFarms/asp-terraform-lab"
+}
+
+# Import Linux Web App
+import {
+  to = azurerm_linux_web_app.webapp
+  id = "/subscriptions/1f732aca-0422-4a0c-8e68-9db55f9accb2/resourceGroups/rg-terraform-cicd-lab-v2/providers/Microsoft.Web/sites/app-tf-lab-${random_integer.suffix.result}"
 }
