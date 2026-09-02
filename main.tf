@@ -13,7 +13,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-terraform-cicd-lab"
+  name     = "rg-terraform-cicd-lab-v2"
   location = "west Europe"
 }
 
