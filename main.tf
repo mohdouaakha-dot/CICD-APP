@@ -43,3 +43,8 @@ resource "random_integer" "suffix" {
   min = 10000
   max = 99999
 }
+
+output "webapp_name" {
+  value       = azurerm_linux_web_app.webapp.name
+  description = "The name of the generated Azure Web App"
+}
