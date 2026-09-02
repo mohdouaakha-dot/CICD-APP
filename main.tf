@@ -14,7 +14,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rg" {
   name     = "rg-terraform-cicd-lab"
-  location = "East US"
+  location = "west Europe"
 }
 
 resource "azurerm_service_plan" "plan" {
