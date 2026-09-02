@@ -48,3 +48,8 @@ output "webapp_name" {
   value       = azurerm_linux_web_app.webapp.name
   description = "The name of the generated Azure Web App"
 }
+
+import {
+  to = azurerm_resource_group.rg
+  id = "/subscriptions/1f732aca-0422-4a0c-8e68-9db55f9accb2/resourceGroups/rg-terraform-cicd-lab-v2"
+}
